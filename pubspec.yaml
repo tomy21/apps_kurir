@@ -1,0 +1,34 @@
+name: apps_kurir
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+  flutter_svg: ^1.1.6
+  dropdown_search: ^5.0.5
+  google_maps_flutter: ^2.2.4
+  google_map_polyline_new: ^0.3.0+2
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  assets: 
+    - assets/img/
+  fonts: 
+    - family: Poppins
+      fonts: 
+        - asset: assets/font/Poppins-Bold.ttf
+        - asset: assets/font/Poppins-Light.ttf
+        - asset: assets/font/Poppins-Regular.ttf
+        - asset: assets/font/Poppins-SemiBold.ttf
+  uses-material-design: true
+
