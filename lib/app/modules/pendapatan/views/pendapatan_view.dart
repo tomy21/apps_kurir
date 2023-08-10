@@ -1,4 +1,4 @@
-import 'package:apps_kurir/app/modules/home/views/home_view.dart';
+// import 'package:apps_kurir/app/modules/home/views/home_view.dart';
 import 'package:apps_kurir/config/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -232,30 +232,30 @@ class PendapatanView extends GetView<PendapatanController> {
                                   ),
                                 ),
                               ),
-                              ElevatedButton(
-                                onPressed: () => Get.off(() => HomeView()),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    children: [
-                                      const Icon(Icons.history_edu, size: 18,),
-                                      SizedBox(width: 5,),
-                                      Text("History", style: TextStyle(fontSize: 14),)
-                                    ],
-                                  ),
-                                ),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: AppColor.textWhite,
-                                  side: BorderSide(
-                                    color: AppColor.btnPrimary,
-                                    width: 1.0,
-                                  ),
-                                  foregroundColor: AppColor.btnPrimary,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                ),
-                              ),
+                              // ElevatedButton(
+                              //   onPressed: () => Get.off(() => HomeView()),
+                              //   child: Padding(
+                              //     padding: const EdgeInsets.all(8.0),
+                              //     child: Row(
+                              //       children: [
+                              //         const Icon(Icons.history_edu, size: 18,),
+                              //         SizedBox(width: 5,),
+                              //         Text("History", style: TextStyle(fontSize: 14),)
+                              //       ],
+                              //     ),
+                              //   ),
+                              //   style: ElevatedButton.styleFrom(
+                              //     backgroundColor: AppColor.textWhite,
+                              //     side: BorderSide(
+                              //       color: AppColor.btnPrimary,
+                              //       width: 1.0,
+                              //     ),
+                              //     foregroundColor: AppColor.btnPrimary,
+                              //     shape: RoundedRectangleBorder(
+                              //       borderRadius: BorderRadius.circular(15),
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ],

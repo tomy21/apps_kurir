@@ -2,8 +2,10 @@ import 'package:get/get.dart';
 
 import '../modules/beranda/bindings/beranda_binding.dart';
 import '../modules/beranda/views/beranda_view.dart';
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
+// import '../modules/home/bindings/home_binding.dart';
+// import '../modules/home/views/home_view.dart';
+import '../modules/listResi/bindings/list_resi_binding.dart';
+import '../modules/listResi/views/list_resi_view.dart';
 import '../modules/pendapatan/bindings/pendapatan_binding.dart';
 import '../modules/pendapatan/views/pendapatan_view.dart';
 import '../modules/profil/bindings/profil_binding.dart';
@@ -17,11 +19,11 @@ class AppPages {
   static const INITIAL = Routes.HOME;
 
   static final routes = [
-    GetPage(
-      name: _Paths.HOME,
-      page: () => const HomeView(),
-      binding: HomeBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.HOME,
+    //   page: () => const HomeView(),
+    //   binding: HomeBinding(),
+    // ),
     GetPage(
       name: _Paths.PENDAPATAN,
       page: () => const PendapatanView(),
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.BERANDA,
       page: () => const BerandaView(),
       binding: BerandaBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_RESI,
+      page: () => const ListResiView(),
+      binding: ListResiBinding(),
     ),
   ];
 }

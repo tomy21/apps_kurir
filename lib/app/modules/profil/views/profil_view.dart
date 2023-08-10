@@ -93,8 +93,8 @@ class ProfilView extends GetView<ProfilController> {
                 ),
                 Container(
                   margin: EdgeInsets.only(
-                    left: 30,
-                    right: 30,
+                    left: 20,
+                    right: 20,
                   ),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(
@@ -117,7 +117,7 @@ class ProfilView extends GetView<ProfilController> {
                           ),
                           Divider(
                             thickness: 2,
-                            color: AppColor.textSoft2,
+                            color: Color.fromARGB(255, 226, 226, 226),
                           ),
                           SizedBox(
                             height: 15,
@@ -130,7 +130,7 @@ class ProfilView extends GetView<ProfilController> {
                           ),
                           Divider(
                             thickness: 2,
-                            color: AppColor.textSoft2,
+                            color: Color.fromARGB(255, 226, 226, 226),
                           ),
                           SizedBox(
                             height: 15,
@@ -143,7 +143,7 @@ class ProfilView extends GetView<ProfilController> {
                           ),
                           Divider(
                             thickness: 2,
-                            color: AppColor.textSoft2,
+                            color: Color.fromARGB(255, 226, 226, 226),
                           ),
                           SizedBox(
                             height: 15,
@@ -156,7 +156,7 @@ class ProfilView extends GetView<ProfilController> {
                           ),
                           Divider(
                             thickness: 2,
-                            color: AppColor.textSoft2,
+                            color: Color.fromARGB(255, 226, 226, 226),
                           ),
                           SizedBox(
                             height: 15,
@@ -172,7 +172,7 @@ class ProfilView extends GetView<ProfilController> {
                             onPressed: () => Get.off(()=> const LoginPages()),
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
-                                  vertical: 8, horizontal: 100),
+                                  vertical: 8, horizontal: 90),
                               child: Text(
                                 "Keluar",
                                 style: TextStyle(

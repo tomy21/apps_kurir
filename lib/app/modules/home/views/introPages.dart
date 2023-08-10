@@ -33,7 +33,7 @@ class IntroPages extends StatelessWidget {
               child: Image.asset("assets/img/logo crewdible fix-01.png"),
             ),
             SizedBox(
-              height: 50,
+              height: 150,
             ),
             ElevatedButton(
               onPressed: () => Get.off(() => const LoginPages()),
@@ -48,7 +48,7 @@ class IntroPages extends StatelessWidget {
                 fixedSize: Size(326, 50),
                 backgroundColor: AppColor.btnPrimary,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 foregroundColor: AppColor.textWhite,
               ),
@@ -56,28 +56,28 @@ class IntroPages extends StatelessWidget {
             SizedBox(
               height: 11,
             ),
-            ElevatedButton(
-              onPressed: () => Get.off(()=>DaftarPages()),
-              child: const Text(
-                "Daftar Akun",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: AppColor.btnPrimary,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                fixedSize: const Size(326, 50),
-                backgroundColor: AppColor.textWhite,
-                side: BorderSide(
-                  color: AppColor.btnPrimary,
-                  width: 2.0,
-                ),
-                foregroundColor: AppColor.btnPrimary,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
+            // ElevatedButton(
+            //   onPressed: () => Get.off(()=>DaftarPages()),
+            //   child: const Text(
+            //     "Daftar Akun",
+            //     style: TextStyle(
+            //       fontSize: 16.0,
+            //       color: AppColor.btnPrimary,
+            //     ),
+            //   ),
+            //   style: ElevatedButton.styleFrom(
+            //     fixedSize: const Size(326, 50),
+            //     backgroundColor: AppColor.textWhite,
+            //     side: BorderSide(
+            //       color: AppColor.btnPrimary,
+            //       width: 2.0,
+            //     ),
+            //     foregroundColor: AppColor.btnPrimary,
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(15),
+            //     ),
+            //   ),
+            // ),
             SizedBox(
               height: 50,
             ),

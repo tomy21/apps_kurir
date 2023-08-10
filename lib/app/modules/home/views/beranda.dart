@@ -12,109 +12,69 @@ class BerandaPages extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final homeController = Get.put(HomeController());
-    final List<Map<String, dynamic>> listGudang = [
-      {
-        "Warehouse": "Gudang Gravity",
-        "Status": "Picked",
-        "Desc": "Warehouse",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 200,
-      },
-      {
-        "Warehouse": "Gudang Kemanggisan",
-        "Status": "Drop paket",
-        "Desc": "HUB",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 200,
-      },
-      {
-        "Warehouse": "Gudang Sunter 2",
-        "Status": "On the way",
-        "Desc": "Warehouse",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 0,
-      },
-      {
-        "Warehouse": "Gudang Sunter 2",
-        "Status": "On the way",
-        "Desc": "Warehouse",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 0,
-      },
-      {
-        "Warehouse": "Gudang Sunter 2",
-        "Status": "On the way",
-        "Desc": "Warehouse",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 0,
-      },
-      {
-        "Warehouse": "Gudang Sunter 2",
-        "Status": "On the way",
-        "Desc": "Warehouse",
-        "Address":
-            "Jalan Sutera Cemara 2 nomor 2, alam sutera, serpong utara Pakulonan - Serpong Utara, Tangerang Selatan",
-        "Paket": 0,
-      },
-    ];
-    return GetBuilder<HomeController>(builder: (controller) {
-      return Scaffold(
-        extendBody: true,
-        bottomNavigationBar: Container(
-          margin: const EdgeInsets.all(20),
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(30),
-              topLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30),
-              bottomLeft: Radius.circular(30),
-            ),
-            boxShadow: [
-              BoxShadow(
-                  color: AppColor.textSoft, spreadRadius: 2, blurRadius: 10),
-            ],
-            color: Colors.transparent,
-          ),
-          child: ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(30.0),
-              topRight: Radius.circular(30.0),
-              bottomRight: Radius.circular(30),
-              bottomLeft: Radius.circular(30),
-            ),
-            child: BottomNavigationBar(
-              fixedColor: AppColor.btnPrimary,
-              onTap: controller.changeTabIndex,
-              currentIndex: controller.tabIndex,
-              items: [
-                _bottomNavigationBarItem(
-                    icon: Icons.home_outlined, label: 'Home'),
-                _bottomNavigationBarItem(
-                    icon: Icons.account_balance_wallet_rounded,
-                    label: 'Pendapatan'),
-                _bottomNavigationBarItem(
-                    icon: Icons.person_outline, label: 'Profil'),
-              ],
-            ),
-          ),
-        ),
-        body: IndexedStack(
-          index: controller.tabIndex,
-          children: [
-            BerandaView(),
-            PendapatanView(),
-            ProfilView(),
-          ],
-        ),
-      );
-    });
+    return Scaffold(
+      // ... other properties
+      body: Center(
+        child: Text('BerandaView Content'),
+      ),
+    );
   }
+  // Widget build(BuildContext context) {
+  //   final homeController = Get.put(HomeController());
+    
+    
+    // return GetBuilder<HomeController>(builder: (controller) {
+    //   return Scaffold(
+    //     extendBody: true,
+    //     bottomNavigationBar: Container(
+    //       margin: const EdgeInsets.all(20),
+    //       decoration: const BoxDecoration(
+    //         borderRadius: BorderRadius.only(
+    //           topRight: Radius.circular(30),
+    //           topLeft: Radius.circular(30),
+    //           bottomRight: Radius.circular(30),
+    //           bottomLeft: Radius.circular(30),
+    //         ),
+    //         boxShadow: [
+    //           BoxShadow(
+    //               color: AppColor.textSoft, spreadRadius: 2, blurRadius: 10),
+    //         ],
+    //         color: Colors.transparent,
+    //       ),
+    //       child: ClipRRect(
+    //         borderRadius: const BorderRadius.only(
+    //           topLeft: Radius.circular(30.0),
+    //           topRight: Radius.circular(30.0),
+    //           bottomRight: Radius.circular(30),
+    //           bottomLeft: Radius.circular(30),
+    //         ),
+    //         child: BottomNavigationBar(
+    //           fixedColor: AppColor.btnPrimary,
+    //           onTap: controller.changeTabIndex,
+    //           currentIndex: controller.tabIndex,
+    //           items: [
+    //             _bottomNavigationBarItem(
+    //                 icon: Icons.home_outlined, label: 'Home'),
+    //             _bottomNavigationBarItem(
+    //                 icon: Icons.account_balance_wallet_rounded,
+    //                 label: 'Pendapatan'),
+    //             _bottomNavigationBarItem(
+    //                 icon: Icons.person_outline, label: 'Profil'),
+    //           ],
+    //         ),
+    //       ),
+    //     ),
+    //     body: IndexedStack(
+    //       index: controller.tabIndex,
+    //       children: [
+    //         BerandaView(),
+    //         PendapatanView(),
+    //         ProfilView(),
+    //       ],
+    //     ),
+    //   );
+    // });
+  // }
 
   _bottomNavigationBarItem({IconData? icon, String? label}) {
     return BottomNavigationBarItem(

@@ -7,6 +7,7 @@ abstract class Routes {
   static const PENDAPATAN = _Paths.PENDAPATAN;
   static const PROFIL = _Paths.PROFIL;
   static const BERANDA = _Paths.BERANDA;
+  static const LIST_RESI = _Paths.LIST_RESI;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const PENDAPATAN = '/pendapatan';
   static const PROFIL = '/profil';
   static const BERANDA = '/beranda';
+  static const LIST_RESI = '/list-resi';
 }

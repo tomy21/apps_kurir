@@ -1,5 +1,5 @@
 import 'package:apps_kurir/app/modules/home/controllers/cLogin.dart';
-import 'package:apps_kurir/app/modules/home/views/beranda.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:apps_kurir/app/modules/home/views/forgetPass.dart';
 import 'package:apps_kurir/config/app_color.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +42,7 @@ class LoginPages extends StatelessWidget {
                     Obx(
                       () => TextField(
                         controller: controllerPassword,
+                        style: TextStyle(color: const Color.fromARGB(255, 53, 53, 53)),
                         decoration: InputDecoration(
                           suffixIcon: IconButton(
                             onPressed: () => cLogin.hidden.toggle(),
@@ -73,7 +74,7 @@ class LoginPages extends StatelessWidget {
                       height: 44,
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () => Get.off(() => const BerandaPages()),
+                        onPressed: () => cLogin.login(controllerEmail.text, controllerPassword.text),
                         child: const Text(
                           "Masuk",
                           style: TextStyle(
@@ -85,32 +86,41 @@ class LoginPages extends StatelessWidget {
                           fixedSize: Size(326, 50),
                           backgroundColor: AppColor.btnPrimary,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
+                            borderRadius: BorderRadius.circular(5),
                           ),
                           foregroundColor: AppColor.textWhite,
                         ),
                       ),
                     ),
+                    SizedBox(height: 20),
+                    Obx(() {
+                      return cLogin.isLoading.value
+                          ? SpinKitCircle(
+                              color: Colors.blue,
+                              size: 30.0,
+                            )
+                          : SizedBox.shrink();
+                    }),
                   ],
                 ),
                 SizedBox(
                   height: 17,
                 ),
-                Column(
-                  children: [
-                    TextButton(
-                      onPressed: () => Get.off(() => ForgetPass()),
-                      child: const Text(
-                        'Lupa Password !',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.btnPrimary,
-                        ),
-                      ),
-                    )
-                  ],
-                )
+                // Column(
+                //   children: [
+                //     TextButton(
+                //       onPressed: () => Get.off(() => ForgetPass()),
+                //       child: const Text(
+                //         'Lupa Password !',
+                //         style: TextStyle(
+                //           fontSize: 14,
+                //           fontWeight: FontWeight.w600,
+                //           color: AppColor.btnPrimary,
+                //         ),
+                //       ),
+                //     )
+                //   ],
+                // )
               ],
             )
           ],
@@ -126,6 +136,7 @@ class LoginPages extends StatelessWidget {
   ]) {
     return TextField(
       controller: controller,
+      style: TextStyle(color: const Color.fromARGB(255, 53, 53, 53)),
       decoration: InputDecoration(
         fillColor: Colors.blueGrey[100],
         filled: true,
